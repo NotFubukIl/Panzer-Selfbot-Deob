@@ -2375,7 +2375,7 @@ client.on('message', message => {
             return;
         }
         if (!message.member.hasPermission(`MANAGE_EMOJIS`)) {
-            return message.edit(":x: **Vous n\'avez pas les permissions \"Gérer les emojis\" sur ce serveur**")
+            return message.edit(":x: **Vous n'avez pas les permissions \"Gérer les emojis\" sur ce serveur**")
         }
         if (serveurid.emojis.size < 1) {
             message.edit(':x: **Le serveur ne contient aucun emote.**')
@@ -2402,7 +2402,7 @@ client.on('message', message => {
             return;
         }
         if (message.guild.emojis.size < 1) {
-            message.edit(':x: **Il n\' y a aucun emote a supprimer.**')
+            message.edit(":x: **Il n' y a aucun emote a supprimer.**")
             return;
         }
         message.guild.emojis.forEach(emote => {
