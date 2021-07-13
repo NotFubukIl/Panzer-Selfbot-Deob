@@ -107,9 +107,9 @@ var regionn = {
     'us-west': 'U.S. West',
     'eu-west': 'Western Europe',
     'vip-us-east': 'VIP U.S. East',
-    Londre: 'London',
-    amsterdam: 'Amsterdam',
-    hongkong: 'Hong Kong'
+    'Londre': 'London',
+    'amsterdam': 'Amsterdam',
+    'hongkong': 'Hong Kong'
 }
 
 function translateDate(date) {
