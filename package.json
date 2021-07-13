@@ -1,0 +1,26 @@
+{
+  "name": "delta",
+  "version": "1.1.1",
+  "description": "Nice selfbot created for you :heart:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "0xT=HC²#0001",
+  "license": "ISC",
+  "dependencies": {
+    "await-timeout": "^1.1.1",
+    "axios": "^0.21.1",
+    "base-64": "^1.0.0",
+    "colors": "^1.4.0",
+    "discord-rpc": "^3.1.4",
+    "discord.js": "^11.6.4",
+    "discordrpcgenerator": "^1.2.0",
+    "hastebin-gen": "^2.0.5",
+    "public-ip": "^4.0.4",
+    "request": "^2.88.2",
+    "superagent": "^6.1.0",
+    "utf8": "^3.0.0",
+    "webhook-discord": "^3.7.7"
+  }
+}
