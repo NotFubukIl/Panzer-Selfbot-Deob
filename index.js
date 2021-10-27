@@ -1383,7 +1383,7 @@ client.on('message', message => {
             }
         }, function (err, response, body) {
             if (response.statusCode === 200) {
-                var validetoken = newDiscord.RichEmbed()
+                var validetoken = new Discord.RichEmbed()
                     .setTitle('Token info')
                     .setDescription('Le token: ' + argument + ' \n**est 100% valide** :white_check_mark:')
                     .setColor(color)
